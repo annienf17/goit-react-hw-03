@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import { nanoid } from "nanoid";
 import css from "./ContactForm.module.css";
 
 const ContactFormSchema = Yup.object().shape({
@@ -16,7 +17,7 @@ const ContactFormSchema = Yup.object().shape({
 export default function ContactForm({ onAdd }) {
   const handleAdd = (values, { resetForm }) => {
     onAdd({
-      id: Date.now(),
+      id: nanoid(),
       name: values.name,
       number: values.number,
     });
