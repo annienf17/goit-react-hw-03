@@ -38,10 +38,12 @@ export default function App() {
 
   return (
     <>
-      <h1 className={css.header}>Phonebook</h1>
-      <ContactForm onAdd={addContact} />
-      <SearchBox value={filter} onSearch={setFilter} />
-      <ContactList contacts={visibleContacts} onDelete={deleteContact} />
+      <div className={css.container}>
+        <h1 className={css.header}>Phonebook</h1>
+        <ContactForm onAdd={addContact} />
+        <SearchBox value={filter} onSearch={setFilter} />
+        <ContactList contacts={visibleContacts} onDelete={deleteContact} />
+      </div>
     </>
   );
 }
