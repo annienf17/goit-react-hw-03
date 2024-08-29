@@ -5,10 +5,12 @@ import css from "./ContactForm.module.css";
 
 const ContactFormSchema = Yup.object().shape({
   name: Yup.string()
+    .matches(/^[A-Za-z]+$/, "Imię może zawierać tylko litery")
     .required("Wypełnienie pola jest obowiązkowe")
     .min(3, "Minimalna liczba znaków to 3")
     .max(50, "Maksymalna liczba znaków to 50"),
   number: Yup.string()
+    .matches(/^\d+$/, "Numer może zawierać tylko cyfry")
     .required("Wypełnienie pola jest obowiązkowe")
     .min(3, "Minimalna liczba znaków to 3")
     .max(50, "Maksymalna liczba znaków to 50"),
