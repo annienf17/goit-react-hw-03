@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import css from "./SearchBox.module.css";
 
 export default function SearchBox({ value, onSearch }) {

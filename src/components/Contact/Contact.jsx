@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { HiUser, HiPhone } from "react-icons/hi";
 import css from "./Contact.module.css";
 

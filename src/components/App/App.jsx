@@ -6,7 +6,6 @@ import css from "./App.module.css";
 import { useState, useEffect, useCallback, useMemo } from "react";
 
 export default function App() {
-  // Używamy try...catch w useState do obsługi błędów przy pobieraniu danych z localStorage:
   const [contacts, setContacts] = useState(() => {
     try {
       const savedContacts = localStorage.getItem("contacts");
@@ -59,7 +58,7 @@ export default function App() {
     });
   }, []);
 
-  // Używamy useMemo do optymalizacji obliczania visibleContacts.
+  // Używam useMemo do optymalizacji obliczania visibleContacts.
   // visibleContacts będzie ponownie obliczane tylko wtedy, gdy zmienią się contacts lub filter.
   const visibleContacts = useMemo(() => {
     return contacts.filter((contact) =>
