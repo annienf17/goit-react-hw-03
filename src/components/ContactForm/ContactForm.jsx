@@ -11,7 +11,7 @@ const ContactFormSchema = Yup.object().shape({
     .min(3, "Minimalna liczba znaków to 3")
     .max(50, "Maksymalna liczba znaków to 50"),
   number: Yup.string()
-    .matches(/^[\d-]+$/, "Numer może zawierać tylko cyfry i znak '-'")
+    .matches(/^\d+(-\d+){0,2}$/, "Number moze zawierac tylko cyfry i myslniki")
     .required("Wypełnienie pola jest obowiązkowe")
     .min(3, "Minimalna liczba znaków to 3")
     .max(50, "Maksymalna liczba znaków to 50"),
